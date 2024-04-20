@@ -1,7 +1,7 @@
 ## FAQ component
 
 ### 📝 Task: Create a re-usable "Frequently Asked Questions" component
-![]()
+![Task](https://github.com/MikaZ21/frontendeval/assets/93892096/718bb541-8fe5-40da-9258-0b3fdcfe0768)
 
 #### Requirements
 The FAQ component should receive the list of questions in the JS object format above
