@@ -1,0 +1,40 @@
+.container {
+    background-image: linear-gradient(to bottom right, red, yellow);
+    width: 30%;
+    margin: auto;
+    padding: 20px 40px;
+  }
+  
+  input {
+    width: 15%;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  button {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  #startBtn {
+    background-color: green;
+    color: palegreen;
+  }
+  
+  #stopBtn {
+    background-color: red;
+    color: darkorange;
+    display: none;
+  }
+  
+  #resetBtn {
+    background-color: palegreen;
+    color: green;
+    display: none;
+  }
