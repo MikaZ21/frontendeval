@@ -31,6 +31,8 @@ function startTimer() {
     // Calculate the initial time
     initialTime = (hours * 3600) + (minutes * 60) + seconds;
     
+    // Ensure that the user enters a valid time before starting the timer.
+    // This validation ensures that the timer is started only when the user provides a valid input time.
     if (initialTime <= 0) {
         alert('Please enter a valid time.');
         return;
@@ -53,6 +55,12 @@ function startTimer() {
     document.getElementById('startBtn').style.display = 'none';
     document.getElementById('pauseBtn').style.display = 'inline-block';
     document.getElementById('resetBtn').style.display = 'inline-block';
+
+     // Set background color to transparent
+    const inputs = document.querySelectorAll('input[type="number"]');
+    inputs.forEach(input => {
+    input.style.backgroundColor = 'transparent';
+    });
     
     isRunning = true; 
   }
@@ -86,6 +94,12 @@ function resetTimer() {
     document.getElementById('pauseBtn').style.display = 'none';
     document.getElementById('resetBtn').style.display = 'none';
     
+    // Set background color back to white
+    const inputs = document.querySelectorAll('input[type="number"]');
+    inputs.forEach(input => {
+    input.style.backgroundColor = '#ffffff';
+    });
+
     // Reset running state and elapsed time
     isRunning = false;
     elapsedTime = 0;

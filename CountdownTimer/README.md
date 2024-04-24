@@ -16,10 +16,12 @@
 • When the timer reaches zero, if the app has appropriate permissions, it should display a Notification that the timer is complete.\
 • If the app doesn't have appropriate permissions, it should show an alert when the timer reaches zero.
 
-
-
 ### Completed task 🍵🌿
 #### The initial load
 ![he initial load]()
 #### After clicked the start button
 ![After clicked the start button]()
+#### validation check to ensure that the user enters a valid time before starting the timer
+![validation check]()
+#### Notification that the timer is complete
+![Notification]()
