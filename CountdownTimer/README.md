@@ -19,14 +19,10 @@
 
 ### Completed task 🍵🌿
 #### The initial load
-![he initial load](https://github.com/MikaZ21/frontendeval/assets/93892096/ccd7359c-2df2-45f9-a92a-09d35cbb3027)
 <img src="https://github.com/MikaZ21/frontendeval/assets/93892096/ccd7359c-2df2-45f9-a92a-09d35cbb3027" width="70%" height="70%">
 #### After clicked the start button
-![After clicked the start button](https://github.com/MikaZ21/frontendeval/assets/93892096/d30858a5-060c-4c2a-abf6-1b81ba345c1c)
 <img src="https://github.com/MikaZ21/frontendeval/assets/93892096/d30858a5-060c-4c2a-abf6-1b81ba345c1c" width="70%" height="70%">
 #### validation check to ensure that the user enters a valid time before starting the timer
-![validation check](https://github.com/MikaZ21/frontendeval/assets/93892096/4f7317d1-e6f5-45c1-9aed-93f08a1bb48d)
 <img src="https://github.com/MikaZ21/frontendeval/assets/93892096/4f7317d1-e6f5-45c1-9aed-93f08a1bb48d" width="70%" height="70%">
 #### Notification that the timer is complete
-![Notification](https://github.com/MikaZ21/frontendeval/assets/93892096/4317b58f-4b44-49c0-b4d2-90633a099ee2)
 <img src="https://github.com/MikaZ21/frontendeval/assets/93892096/4317b58f-4b44-49c0-b4d2-90633a099ee2" width="70%" height="70%">
