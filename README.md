@@ -8,7 +8,7 @@
 • Every question from the object should be displayed, with an adjacent chevron as in the mockup.\
 • Clicking any question should reveal the answer.\
 • Clicking a question again should hide the answer.\
-• The first answer should be revealed by default.\
+• The first answer should be revealed by default.
 
 ### Completed task 🍵🌿
 #### The first answer revealed by default

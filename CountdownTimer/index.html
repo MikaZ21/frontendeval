@@ -8,18 +8,19 @@
 </head>
 
 <body>
-<p>Allow to set the hours, minutes, and seconds using input fields, and then start the countdown timer. Once the timer starts, the start button don't display and stop and reset button display. Stop the timer at any time and continue to start from that point again or reset to start over again or set new target time.</p>
-
 <div class="container">
 <h1>Countdown Timer</h1>
 
 <!-- Input fields to set hours, minutes, and seconds -->
+<label for="hours" class="visually-hidden">Hours</label>
 <input type="number" id="hours" min="0" max="99" placeholder="HH">
-  <span>:</span>
+<span>:</span>
 
+<label for="minutes" class="visually-hidden">Minutes</label>
 <input type="number" id="minutes" min="0" max="59"  placeholder="MM">
-  <span>:</span>
+<span>:</span>
 
+<label for="seconds" class="visually-hidden">Seconds</label>
 <input type="number" id="seconds" min="0" max="59"  placeholder="SS">
 
 <!-- Buttons to start, pause, and reset the timer -->

@@ -4,10 +4,21 @@ let isRunning = false;
 let initialTime; 
 let elapsedTime = 0; 
 
-function startTimer() {
+// Request notification permission
+// Ensure that the 'permissionGranted' variable is correctly set to 'true' after 
+// the user grants permission for notifications.
+let permissionGranted = false;
+if ('Notification' in window) {
+    Notification.requestPermission().then(function(permission) {
+      if (permission === 'granted') {
+        permissionGranted = true;
+      }
+    });
+  }
 
+function startTimer() {
   if (!isRunning) {
-    // Retriev input elements
+    // Retrieve input elements
     const hoursInput = document.getElementById('hours');
     const minutesInput = document.getElementById('minutes');
     const secondsInput = document.getElementById('seconds');
@@ -20,26 +31,14 @@ function startTimer() {
     // Calculate the initial time
     initialTime = (hours * 3600) + (minutes * 60) + seconds;
     
+    if (initialTime <= 0) {
+        alert('Please enter a valid time.');
+        return;
+    }
+
     // Calculate the target time every time the timer starts
     targetTime = new Date().getTime() + (initialTime * 1000) - elapsedTime;
-
-//    // Clear the placeholder
-//     hoursInput.placeholder = '';
-//     minutesInput.placeholder = '';
-//     secondsInput.placeholder = '';
     
-    console.log("Hours input value:", hoursInput.value);
-    console.log("Minutes input value:", minutesInput.value);
-    console.log("Seconds input value:", secondsInput.value);
-
-     // Call updateTimer to display initial countdown values
-    // updateTimer(hoursInput, minutesInput, secondsInput);
-
-
-    console.log("Hours input value:", hoursInput.value);
-    console.log("Minutes input value:", minutesInput.value);
-    console.log("Seconds input value:", secondsInput.value);
-
     // Start the timer
     timerInterval = setInterval(function() {
     updateTimer(hoursInput, minutesInput, secondsInput);
@@ -64,6 +63,7 @@ function pauseTimer() {
   // Calculate elapsed time only when the timer is running
   if (isRunning) {
     elapsedTime += new Date().getTime() - targetTime;
+    targetTime = new Date().getTime(); // Update target time to current time
   
     document.getElementById('startBtn').style.display = 'inline-block';
     document.getElementById('pauseBtn').style.display = 'none';
@@ -74,22 +74,12 @@ function pauseTimer() {
 function resetTimer() {
   clearInterval(timerInterval);
 
-    // Reset input value to '0'  
-    // document.getElementById('hours').value = setPlaceholderToHH();
-    // document.getElementById('minutes').value = '0';
-    // document.getElementById('seconds').value = '0';
-
-
     document.getElementById('hours').value = '';
     document.getElementById('minutes').value = '';
     document.getElementById('seconds').value = '';
     document.getElementById('hours').disabled = false;
     document.getElementById('minutes').disabled = false;
     document.getElementById('seconds').disabled = false;
-    // // Reset placeholders
-    // setPlaceholderToHH();
-    // setPlaceholderToMM();
-    // setPlaceholderToSS();
 
     // Update the UI
     document.getElementById('startBtn').style.display = 'inline-block';
@@ -105,93 +95,39 @@ function updateTimer(hoursInput, minutesInput, secondsInput) {
   const now = new Date().getTime();
   const remainingTime = targetTime - now + elapsedTime;
 
-  console.log("Hours input value:", hoursInput.value);
-  console.log("Minutes input value:", minutesInput.value);
-  console.log("Seconds input value:", secondsInput.value);
-
-
   if (remainingTime <= 0) {
     clearInterval(timerInterval);
     
-    // Set input values to '0' when the timer reaches zero
+    // Set input values to '00' when the timer reaches zero
     hoursInput.value = '00'
     minutesInput.value = '00';
     secondsInput.value = '00';
 
+    // document.getElementById('hours').value = '00';
+    // document.getElementById('minutes').value = '00';
+    // document.getElementById('seconds').value = '00';
+
+    // Show notification or alert
+    if (permissionGranted) {
+        new Notification('Timer Complete');
+    } else {
+        alert('Timer Complete');
+    }
+
     return;
-  }
+    }
   
-  // Calculate the remaining time in hours, minutes, and seconds
-  const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-  const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    // Calculate the remaining time in hours, minutes, and seconds
+    const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
   
-  // Display the formatted time values in the input fields
-//   hoursInput.value = formatTime(hours);
-//   minutesInput.value = formatTime(minutes);
-//   secondsInput.value = formatTime(seconds);
-document.getElementById('hours').value = formatTime(hours);
-document.getElementById('minutes').value = formatTime(minutes);
-document.getElementById('seconds').value = formatTime(seconds);
-
-  console.log("Hours input value:", hoursInput.value);
-  console.log("Minutes input value:", minutesInput.value);
-  console.log("Seconds input value:", secondsInput.value);
-
-// //    // Format the time values with leading zeros
-//   const formattedHours = formatTime(hours);
-//   const formattedMinutes = formatTime(minutes);
-//   const formattedSeconds = formatTime(seconds);
-
-//   console.log("Hours input element:", hoursInput);
-//   console.log("Hours input value:", hoursInput.value);
-
-//   // Display the formatted time values in the input fields
-//   hoursInput.value = formattedHours;
-//   minutesInput.value = formattedMinutes;
-//   secondsInput.value = formattedSeconds;
-
-console.log("Hours input value:", hoursInput.value);
-console.log("Minutes input value:", minutesInput.value);
-console.log("Seconds input value:", secondsInput.value);
-
+    // Display the formatted time values in the input fields
+    document.getElementById('hours').value = formatTime(hours);
+    document.getElementById('minutes').value = formatTime(minutes);
+    document.getElementById('seconds').value = formatTime(seconds);
 }
 
 function formatTime(time) {
   return time < 10 ? `0${time}` : time;
 }
-
-
-// // Function to set placeholder value to 'HH'
-// function setPlaceholderToHH() {
-//   document.getElementById('hours').placeholder = 'HH';
-// }
-// function setPlaceholderToMM() {
-//   document.getElementById('minutes').placeholder = 'MM';
-// }
-// function setPlaceholderToSS() {
-//   document.getElementById('seconds').placeholder = 'SS';
-// }
-
-// // Call setPlaceholderToHH function when the reset button is clicked
-// document.getElementById('resetBtn').addEventListener('click', function() {
-//   setPlaceholderToHH();
-// });
-// document.getElementById('resetBtn').addEventListener('click', function() {
-//   setPlaceholderToMM();
-// });
-// document.getElementById('resetBtn').addEventListener('click', function() {
-//   setPlaceholderToSS();
-// });
-
-// // Set placeholder value to 'HH' when the page loads initially
-// window.addEventListener('load', function() {
-//   setPlaceholderToHH();
-// });
-
-// window.addEventListener('load', function() {
-//   setPlaceholderToMM();
-// });
-// window.addEventListener('load', function() {
-//   setPlaceholderToSS();
-// });

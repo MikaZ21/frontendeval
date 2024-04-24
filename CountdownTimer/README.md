@@ -14,7 +14,7 @@
 • Pressing 'Reset' should revert the app back to the initial state.\
 • While the timer is counting down, the numbers should be zero-padded (e.g. 01 vs 1).\
 • When the timer reaches zero, if the app has appropriate permissions, it should display a Notification that the timer is complete.\
-• If the app doesn't have appropriate permissions, it should show an alert when the timer reaches zero.\
+• If the app doesn't have appropriate permissions, it should show an alert when the timer reaches zero.
 
 
 
