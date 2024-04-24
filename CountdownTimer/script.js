@@ -47,11 +47,11 @@ function startTimer() {
     }, 1000);
     
     
-    // Update the UI
+    // Disable input fields to prevent user interaction.
     document.getElementById('hours').disabled = true;
     document.getElementById('minutes').disabled = true;
     document.getElementById('seconds').disabled = true;
-
+    // Update the UI
     document.getElementById('startBtn').style.display = 'none';
     document.getElementById('pauseBtn').style.display = 'inline-block';
     document.getElementById('resetBtn').style.display = 'inline-block';
