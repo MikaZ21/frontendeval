@@ -27,7 +27,7 @@
     color: palegreen;
   }
   
-  #stopBtn {
+  #pauseBtn {
     background-color: red;
     color: darkorange;
     display: none;

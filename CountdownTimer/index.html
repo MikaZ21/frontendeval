@@ -14,18 +14,18 @@
 <h1>Countdown Timer</h1>
 
 <!-- Input fields to set hours, minutes, and seconds -->
-<input type="number" id="hours" min="0">
+<input type="number" id="hours" min="0" max="99" placeholder="HH">
   <span>:</span>
 
-<input type="number" id="minutes" min="0" max="59" >
+<input type="number" id="minutes" min="0" max="59"  placeholder="MM">
   <span>:</span>
 
-<input type="number" id="seconds" min="0" max="59" >
+<input type="number" id="seconds" min="0" max="59"  placeholder="SS">
 
-<!-- Buttons to start, stop, and reset the timer -->
+<!-- Buttons to start, pause, and reset the timer -->
 <button id="startBtn" onclick="startTimer()">Start</button>
 
-<button id="stopBtn" onclick="stopTimer()" >Stop</button>
+<button id="pauseBtn" onclick="pauseTimer()" >Pause</button>
 
 <button id="resetBtn" onclick="resetTimer()" >Reset</button>
   
