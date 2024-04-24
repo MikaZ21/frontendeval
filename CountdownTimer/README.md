@@ -1,4 +1,4 @@
-## Countdown Timer
+## Countdown Timer ⏱️
 
 ### 📝 Task: Countdown timer that allows the user to enter hours, minutes, and seconds.
 ![Task-Mockup](https://github.com/MikaZ21/frontendeval/assets/93892096/0c5bc90d-827f-4819-949c-5ff1c23a4727)
