@@ -1,6 +1,6 @@
-## Countdown Timer ⏱️
+# Countdown Timer ⏱️
 
-### 📝 Task: Countdown timer that allows the user to enter hours, minutes, and seconds.
+## 📝 Task: Countdown timer that allows the user to enter hours, minutes, and seconds.
 <img src="https://github.com/MikaZ21/frontendeval/assets/93892096/0c5bc90d-827f-4819-949c-5ff1c23a4727" width="70%" height="70%">
 
 ### Once the timer has started, the input fields should be replaced with plain text that updates every second. The 'Start' button should be replaced with 'Pause' and 'Reset' buttons.
@@ -17,7 +17,7 @@
 • When the timer reaches zero, if the app has appropriate permissions, it should display a Notification that the timer is complete.\
 • If the app doesn't have appropriate permissions, it should show an alert when the timer reaches zero.
 
-### Completed task 🍵🌿
+## Completed task 🍵🌿
 #### The initial load
 <img src="https://github.com/MikaZ21/frontendeval/assets/93892096/ccd7359c-2df2-45f9-a92a-09d35cbb3027" width="70%" height="70%">\
 
