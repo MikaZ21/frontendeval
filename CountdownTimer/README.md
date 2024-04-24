@@ -7,7 +7,7 @@
 <img src="https://github.com/MikaZ21/frontendeval/assets/93892096/169b64c4-85cf-41e9-97e9-abd4ad28b722" width="70%" height="70%">\
 ### Once the timer completes, it should alert the user with a native notification (using the Notification API), or fallback to an alert.
 
-#### Requirements
+## Requirements
 • The 'Hours', 'Minutes', and 'Seconds' fields should not have visible labels, but they should be accessible and clearly labelled to a screen reader.\
 • The input fields should use placeholder text as shown in the screenshot above.\
 • Pressing 'Start' should start the timer, replace the input fields with plain text for the hours/minutes/seconds, and replace 'Start' with 'Pause' and 'Reset' buttons.\
