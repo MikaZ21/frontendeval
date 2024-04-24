@@ -1,9 +1,9 @@
 ## Countdown Timer
 
 ### 📝 Task: Countdown timer that allows the user to enter hours, minutes, and seconds.
-![Task-Mockup]()
+![Task-Mockup](https://github.com/MikaZ21/frontendeval/assets/93892096/0c5bc90d-827f-4819-949c-5ff1c23a4727)
 ### Once the timer has started, the input fields should be replaced with plain text that updates every second. The 'Start' button should be replaced with 'Pause' and 'Reset' buttons.
-![Task-Mockup]()
+![Task-Mockup](https://github.com/MikaZ21/frontendeval/assets/93892096/169b64c4-85cf-41e9-97e9-abd4ad28b722)
 ### Once the timer completes, it should alert the user with a native notification (using the Notification API), or fallback to an alert.
 
 #### Requirements
